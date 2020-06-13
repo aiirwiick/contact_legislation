@@ -252,11 +252,13 @@ function addressSearch() {
             })
         }
         mailto = "mailto:"
-        for (var i = 0; i < emails.length; i++) {
+        for (var i = 0; i < emails.length - 1; i++) {
           console.log(emails[i]);
-          mailto += emails[i] + ";"
+          mailto += emails[i] + ";";
         }
+        mailto += emails[emails.length - 1];
         console.log(mailto);
+        mailto += "?subject=subject&body=body";
         window.location.href = mailto;
     });
 
